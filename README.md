@@ -1,11 +1,11 @@
-IoT Security Scanner 🔒
+**IoT Security Scanner** 🔒
 
 The IoT Security Scanner is a Python-based tool to discover IoT devices, scan for vulnerabilities, and assess network security. Designed for administrators, researchers, and security enthusiasts, it provides real-time alerts, detailed reports, and automated monitoring of IoT networks.
 
-📌 Project Focus
+**📌 Project Focus**
 This project automates IoT security scanning to help administrators identify risks quickly. Manual scans are time-consuming; this tool is modular, extensible, and stores results for future analysis.
 
-🛠 Technologies Used
+**🛠 Technologies Used**
 •	Python 3 – Core language
 •	Flask & Flask-SocketIO – Web dashboard and real-time alerts
 •	MongoDB – Stores scan results
@@ -13,7 +13,7 @@ This project automates IoT security scanning to help administrators identify ris
 •	SMTP/Email – Email notifications for high-risk vulnerabilities
 •	Socket Programming – Device discovery & port scanning
 
-⚡ Key Features
+**⚡ Key Features**
 •	Device Discovery: Detects connected devices automatically
 •	Port Scanning: Identifies open & vulnerable ports
 •	Vulnerability Analysis: Checks for insecure services & weak configs
@@ -24,7 +24,7 @@ This project automates IoT security scanning to help administrators identify ris
 •	Modular & Extensible: Easy integration of new modules
 Suitable for enterprises, home networks, and academic research.
 
-🚀 Quick Start
+**🚀 Quick Start**
 <details> <summary>Click to expand</summary> 
 1️) Clone Repository
 git clone https://github.com/<your-username>/iot-security-scanner.git
@@ -44,12 +44,12 @@ http://127.0.0.1:5000
 •	Scan results stored in MongoDB
 </details> 
 
-📊 Example Output
+**📊 Example Output**
 •	Dashboard: Shows devices, open ports, and vulnerabilities
 •	PDF Report: Summarizes IP, MAC, ports, vulnerabilities, and threat levels
 •	Alerts: Critical issues trigger email & dashboard notifications
 
-🔮 Future Improvements
+**🔮 Future Improvements**
 <details> <summary>Click to expand</summary> 
 •	Integrate with CVE/NVD database for live vulnerability mapping
 •	Improved UI with charts, graphs, and filtering
@@ -58,7 +58,7 @@ http://127.0.0.1:5000
 •	Multi-user authentication for secure dashboard access
 </details> 
 
-👨‍💻 Author
+**👨‍💻 Author**
 Jayasri Duraipandi
 📧 Contact: jayasriduraipandi1415@gmail.com
 

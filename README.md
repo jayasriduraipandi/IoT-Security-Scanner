@@ -15,15 +15,15 @@ This project automates IoT security scanning to help administrators identify ris
 - **Socket Programming** – Device discovery & port scanning
 
 <h2>⚡ Key Features</h2>
-•	Device Discovery: Detects connected devices automatically
-•	Port Scanning: Identifies open & vulnerable ports
-•	Vulnerability Analysis: Checks for insecure services & weak configs
-•	Threat Assessment: Classifies risk as Low / Medium / High / Critical
-•	Real-Time Alerts: Email & dashboard notifications
-•	PDF Reporting: Professional scan reports for compliance
-•	Database Storage: MongoDB storage for trend analysis
-•	Modular & Extensible: Easy integration of new modules
-Suitable for enterprises, home networks, and academic research.
+
+- **Device Discovery**: Detects connected devices automatically  
+- **Port Scanning**: Identifies open & vulnerable ports  
+- **Vulnerability Analysis**: Checks for insecure services & weak configurations  
+- **Threat Assessment**: Classifies risk as Low / Medium / High / Critical  
+- **Real-Time Alerts**: Email & dashboard notifications  
+- **PDF Reporting**: Professional scan reports for compliance  
+- **Database Storage**: MongoDB storage for trend analysis  
+- **Modular & Extensible**: Easy integration of new modules  
 
 </h2>🚀 Quick Start<h2>
 <details> <summary>Click to expand</summary> 

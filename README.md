@@ -23,27 +23,23 @@ This project automates IoT security scanning to help administrators identify ris
 - **Real-Time Alerts**: Email & dashboard notifications  
 - **PDF Reporting**: Professional scan reports for compliance  
 - **Database Storage**: MongoDB storage for trend analysis  
-- **Modular & Extensible**: Easy integration of new modules  
+- **Modular & Extensible**: Easy integration of new modules
 
-</h2>🚀 Quick Start<h2>
-<details> <summary>Click to expand</summary> 
-**1️) Clone Repository**
-git clone https://github.com/<your-username>/iot-security-scanner.git
-cd iot-security-scanner
-**2️) Install Dependencies**
-pip install -r requirements.txt
-**3️) Start MongoDB**
-Ensure MongoDB is running locally:
-mongodb://localhost:27017/
-**4️) Run Application**
-python main.py
-**5️) Access Dashboard**
-Open in browser:
-http://127.0.0.1:5000
-**6️) Reports**
-•	PDF reports saved in project folder
-•	Scan results stored in MongoDB
-</details> 
+## Installation & Usage
+
+
+ **Clone Repository**
+> **Install Dependencies**
+>> pip install -r requirements.txt
+>**Start MongoDB**
+>> Ensure MongoDB is running locally: mongodb://localhost:27017/
+>**Run Application**
+>> python main.py
+>**Access Dashboard**
+>> Open your web browser and go to: http://127.0.0.1:5000
+>**Reports**
+>> - PDF reports are saved in the project folder
+>> - Scan results are stored in MongoDB
 
 <h2>📊 Example Output</h2>
 •	Dashboard: Shows devices, open ports, and vulnerabilities
@@ -51,12 +47,13 @@ http://127.0.0.1:5000
 •	Alerts: Critical issues trigger email & dashboard notifications
 
 <h2>🔮 Future Improvements</h2>
-<details> <summary>Click to expand</summary> 
-•	Integrate with CVE/NVD database for live vulnerability mapping
-•	Improved UI with charts, graphs, and filtering
-•	Docker support for easier deployment
-•	Support for additional protocols: UPnP, mDNS, SNMP
-•	Multi-user authentication for secure dashboard access
+
+- **Integrate with CVE/NVD database** for live vulnerability mapping  
+- **Improved UI** with charts, graphs, and filtering  
+- **Docker support** for easier deployment  
+- **Support for additional protocols**: UPnP, mDNS, SNMP  
+- **Multi-user authentication** for secure dashboard access
+  
 </details> 
 
 <h2>👨‍💻 Author</h2>

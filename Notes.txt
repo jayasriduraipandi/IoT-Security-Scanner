@@ -1,0 +1,107 @@
+
+// check_vulnerabilites old code 
+def check_vulnerabilities(open_ports):
+    risky_ports = {
+        23: "Telnet - Unencrypted",
+        21: "FTP - Weak authentication",
+        80: "HTTP - No SSL"
+    }
+    return {port: risky_ports[port] for port in open_ports if port in risky_ports}
+
+
+
+
+    try:
+        if layer2_supported:
+            devices = discover_devices()
+        else:
+            devices = fallback_discovery()
+    except Exception as e:
+        print(f"[!] Error during device discovery: {e}")
+        devices = fallback_discovery()
+
+
+
+Normal code for basic four steps 
+
+from iot_port_scanner import scan_ports
+from vuln_checker import check_vulnerabilities
+from threat_analysis import analyze_threat
+from report_generator import generate_report
+from alerting import send_email_alert, send_dashboard_alert, set_socketio
+from flask import Flask, render_template
+from flask_socketio import SocketIO, emit
+import os
+import socket
+from scapy.all import conf
+
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
+set_socketio(socketio)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+try:
+    from iot_device_discovery import discover_devices
+    layer2_supported = True
+except ImportError:
+    print("[!] Layer 2 (ARP) Discovery module not available. Proceeding with IP-only scan.")
+    layer2_supported = False
+
+def fallback_discovery():
+    print("[*] Using fallback IP discovery (localhost only)")
+    local_ip = socket.gethostbyname(socket.gethostname())
+    return [{"ip": local_ip, "mac": "N/A"}]
+
+def main():
+    print("\n Starting IoT Security Scan...\n")
+
+    devices = [{"ip": "127.0.0.1", "mac": "A8:3B:76:7C:E0:85"}]
+    full_report = []
+
+    for device in devices:
+        ip = device['ip']
+        mac = device.get('mac', 'N/A')
+        print(f"\n Scanning Device: {ip} ({mac})")
+
+        try:
+            ports = scan_ports(ip)
+            print(f" Open Ports: {list(ports.keys())}")
+
+            vulnerabilities = check_vulnerabilities(ports)
+            print(f" Vulnerabilities: {vulnerabilities}")
+
+            risk = analyze_threat(vulnerabilities)
+            print(f" Risk Level: {risk}")
+
+            if risk in ['High', 'Critical']:
+                alert_subject = f"Alert: {risk} Risk Detected on {ip}"
+                alert_message = f"Device IP: {ip}\nMAC: {mac}\nRisk Level: {risk}\nVulnerabilities:\n"
+                for vname, vdetail in vulnerabilities.items():
+                    alert_message += f"- {vname}: {vdetail}\n"
+
+                send_email_alert(alert_subject, alert_message, "jayasrid22mss015@skasc.ac.in")
+                send_dashboard_alert(alert_message)
+                socketio.emit('scan_update', {'message': alert_message})
+
+            full_report.append({
+                "IP Address": ip,
+                "MAC Address": mac,
+                "Open Ports": ', '.join(str(p) for p in ports),
+                "Vulnerabilities": ', '.join(f"{k}: {v}" for k, v in vulnerabilities.items()),
+                "Threat Level": risk
+            })
+
+        except Exception as e:
+            print(f"[!] Error scanning {ip}: {e}")
+
+    generate_report(full_report)
+
+if __name__ == "__main__":
+    main()
+    socketio.run(app, debug=True)
+

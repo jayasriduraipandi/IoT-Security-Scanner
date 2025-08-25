@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IoT Security Scanner Dashboard</title>
+  <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      margin: 20px;
+      color: #333;
+    }
+    h1 {
+      color: #0057b7;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #scan-results {
+      background: #fff;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 25px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #007acc;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+      margin-top: 5px;
+    }
+    li {
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>IoT Security Scanner Dashboard</h1>
+  <div id="scan-results">
+    <p>Waiting for scan results...</p>
+  </div>
+<canvas id="riskChart" width="600" height="300" style="margin-top: 30px;"></canvas>
+  <script>
+   const socket = io();
+
+const ctx = document.getElementById('riskChart').getContext('2d');
+
+let riskChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: [],  // port numbers will go here
+    datasets: [{
+      label: 'Open Ports (count=1 each)', 
+      data: [],
+      backgroundColor: 'rgba(54, 162, 235, 0.6)',
+      borderColor: 'rgba(54, 162, 235, 1)',
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      y: { beginAtZero: true, stepSize: 1 },
+    }
+  }
+});
+
+socket.on('scan_update', data => {
+  const container = document.getElementById('scan-results');
+  container.innerHTML = `
+    <h2>Scan Results</h2>
+    <p><strong>IP Address:</strong> ${data.ip}</p>
+    <p><strong>MAC Address:</strong> ${data.mac}</p>
+    <p><strong>Risk Level:</strong> ${data.risk}</p>
+    <p><strong>Vulnerabilities:</strong></p>
+    <ul>
+      ${Object.entries(data.vulnerabilities).map(([port, vuln]) =>
+        `<li>Port ${port}: ${vuln}</li>`
+      ).join('')}
+    </ul>
+  `;
+
+  // Update chart with open ports count (1 per port)
+  riskChart.data.labels = data.ports.map(String);
+  riskChart.data.datasets[0].data = data.ports.map(() => 1);
+  riskChart.update();
+});
+  </script>
+</body>
+</html>

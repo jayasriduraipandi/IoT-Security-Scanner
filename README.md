@@ -6,12 +6,13 @@ The IoT Security Scanner is a Python-based tool to discover IoT devices, scan fo
 This project automates IoT security scanning to help administrators identify risks quickly. Manual scans are time-consuming; this tool is modular, extensible, and stores results for future analysis.
 
 <h2>🛠 Technologies Used</h2>
-* Python 3 – Core language
->	- Flask & Flask-SocketIO – Web dashboard and real-time alerts
->	- MongoDB – Stores scan results
->	- ReportLab – Generates PDF reports
->	- SMTP/Email – Email notifications for high-risk vulnerabilities
->	- Socket Programming – Device discovery & port scanning
+
+- **Python 3** – Core language  
+- **Flask & Flask-SocketIO** – Web dashboard and real-time alerts  
+- **MongoDB** – Stores scan results  
+- **ReportLab** – Generates PDF reports  
+- **SMTP/Email** – Email notifications for high-risk vulnerabilities  
+- **Socket Programming** – Device discovery & port scanning
 
 <h2>⚡ Key Features</h2>
 •	Device Discovery: Detects connected devices automatically

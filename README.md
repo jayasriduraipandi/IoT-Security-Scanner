@@ -43,7 +43,7 @@ This project automates IoT security scanning to help administrators identify ris
 
 <h2>📊 Example Output</h2>
 
-- **Dashboard:** Shows devices, open ports, and vulnerabilities
+ **Dashboard:** Shows devices, open ports, and vulnerabilities
 - **PDF Report:** Summarizes IP, MAC, ports, vulnerabilities, and threat levels
 - **Alerts:** Critical issues trigger email & dashboard notifications
 

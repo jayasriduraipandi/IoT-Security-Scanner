@@ -58,7 +58,7 @@ This project automates IoT security scanning to help administrators identify ris
 </details> 
 
 <h2>👨‍💻 Author</h2>
-Jayasri Duraipandi
+Author: Jayasri Duraipandi
 📧 Contact: jayasriduraipandi1415@gmail.com
 
 <h2>📄 License</h2>

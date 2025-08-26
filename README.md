@@ -58,8 +58,8 @@ This project automates IoT security scanning to help administrators identify ris
 </details> 
 
 <h2>👨‍💻 Author</h2>
-Author: Jayasri Duraipandi
-📧 Contact: jayasriduraipandi1415@gmail.com
+- Author: Jayasri Duraipandi 
+- 📧 Contact: jayasriduraipandi1415@gmail.com
 
 <h2>📄 License</h2>
 This project is licensed under the MIT License. See the LICENSE file for details.

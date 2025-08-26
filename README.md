@@ -32,14 +32,14 @@ This project automates IoT security scanning to help administrators identify ris
 > **Install Dependencies**
 - >> pip install -r requirements.txt
 >**Start MongoDB**
->> Ensure MongoDB is running locally: mongodb://localhost:27017/
+- >> Ensure MongoDB is running locally: mongodb://localhost:27017/
 >**Run Application**
->> python main.py
+- >> python main.py
 >**Access Dashboard**
->> Open your web browser and go to: http://127.0.0.1:5000
+- >> Open your web browser and go to: http://127.0.0.1:5000
 >**Reports**
->> - PDF reports are saved in the project folder
->> - Scan results are stored in MongoDB
+- >> - PDF reports are saved in the project folder
+- >> - Scan results are stored in MongoDB
 
 <h2>📊 Example Output</h2>
 

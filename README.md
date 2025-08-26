@@ -30,7 +30,7 @@ This project automates IoT security scanning to help administrators identify ris
 
  **Clone Repository**
 > **Install Dependencies**
->> pip install -r requirements.txt
+- >> pip install -r requirements.txt
 >**Start MongoDB**
 >> Ensure MongoDB is running locally: mongodb://localhost:27017/
 >**Run Application**

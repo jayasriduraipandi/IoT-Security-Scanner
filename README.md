@@ -37,9 +37,6 @@ This project automates IoT security scanning to help administrators identify ris
 - >> python main.py
 >**Access Dashboard**
 - >> Open your web browser and go to: http://127.0.0.1:5000
->**Reports**
-- >> - PDF reports are saved in the project folder
-- >> - Scan results are stored in MongoDB
 
 <h2>📊 Example Output</h2>
 

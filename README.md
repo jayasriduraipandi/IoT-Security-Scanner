@@ -27,7 +27,6 @@ This project automates IoT security scanning to help administrators identify ris
 
 ## Installation & Usage
 
-
  **Clone Repository**
 > **Install Dependencies**
 - >> pip install -r requirements.txt
@@ -47,7 +46,7 @@ This project automates IoT security scanning to help administrators identify ris
  **Dashboard:** Shows devices, open ports, and vulnerabilities
 - **PDF Report:** Summarizes IP, MAC, ports, vulnerabilities, and threat levels
 - **Alerts:** Critical issues trigger email & dashboard notifications
-
+  
 <h2>🔮 Future Improvements</h2>
 
 - **Integrate with CVE/NVD database** for live vulnerability mapping  

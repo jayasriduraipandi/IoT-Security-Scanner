@@ -2,10 +2,10 @@
 
 The IoT Security Scanner is a Python-based tool to discover IoT devices, scan for vulnerabilities, and assess network security. Designed for administrators, researchers, and security enthusiasts, it provides real-time alerts, detailed reports, and automated monitoring of IoT networks.
 
-<h2>📌 Project Focus</h2>
+<h2> Project Focus</h2>
 This project automates IoT security scanning to help administrators identify risks quickly. Manual scans are time-consuming; this tool is modular, extensible, and stores results for future analysis.
 
-<h2>🛠 Technologies Used</h2>
+<h2> Technologies Used</h2>
 
 - **Python 3** – Core language  
 - **Flask & Flask-SocketIO** – Web dashboard and real-time alerts  
@@ -14,7 +14,7 @@ This project automates IoT security scanning to help administrators identify ris
 - **SMTP/Email** – Email notifications for high-risk vulnerabilities  
 - **Socket Programming** – Device discovery & port scanning
 
-<h2>⚡ Key Features</h2>
+<h2> Key Features</h2>
 
 - **Device Discovery**: Detects connected devices automatically  
 - **Port Scanning**: Identifies open & vulnerable ports  
@@ -41,7 +41,7 @@ This project automates IoT security scanning to help administrators identify ris
 - >> - Scan results are stored in MongoDB
 
 
-<h2>📊 Example Output</h2>
+<h2> Example Output</h2>
 
  **Dashboard:** Shows devices, open ports, and vulnerabilities
 - **PDF Report:** Summarizes IP, MAC, ports, vulnerabilities, and threat levels
@@ -59,7 +59,7 @@ This project automates IoT security scanning to help administrators identify ris
 
 <h2>👨‍💻 Author</h2>
 - Author: Jayasri Duraipandi 
-- 📧 Contact: jayasriduraipandi1415@gmail.com
+- Contact: jayasriduraipandi1415@gmail.com
 
-<h2>📄 License</h2>
+<h2>License</h2>
 This project is licensed under the MIT License. See the LICENSE file for details.

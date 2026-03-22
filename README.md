@@ -38,8 +38,7 @@ This project automates IoT security scanning to help administrators identify ris
 >**Reports**
 - >> - PDF reports are saved in the project folder
 - >> - Scan results are stored in MongoDB
-
-
+  
 <h2> Example Output</h2>
 
  **Dashboard:** Shows devices, open ports, and vulnerabilities
